@@ -51,10 +51,9 @@ function markTaskAsDone(todosCollection, id) {
         } else if (todos[0].done === true) {
             console.log(`To zadanie było już zakończone`);
             client.close();
-        }
-        else {
+        } else {
             todosCollection.updateOne({
-                _id: mongo.ObjectId(id),
+                _id: mongo.ObjectID(id),
             }, {
                 $set: {
                     done: true,
