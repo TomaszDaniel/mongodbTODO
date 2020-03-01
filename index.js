@@ -147,8 +147,6 @@ function doTheToDo(todosCollection) {
             break;
         }
     }
-
-    client.close();
 }
 
 client.connect(err => {
